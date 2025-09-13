@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".LoginFragment"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="@dimen/_16sdp"
+    android:background="@drawable/gradiant">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_150sdp"
+        app:lottie_rawRes="@raw/login"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="লগইন করুন"
+        android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+        android:gravity="center"
+        android:layout_margin="@dimen/_8sdp"
+        android:textColor="#283593"
+        android:fontFamily="@font/acme"
+        android:textStyle="bold"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="মোবাইল"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        app:endIconMode="clear_text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="পাসওয়ার্ড"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        app:endIconMode="password_toggle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textWebPassword"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="লগইন"
+        android:layout_marginTop="@dimen/_16sdp"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:backgroundTint="#3F51B5"
+        android:textColor="#FFFFFF"
+        android:padding="12dp"
+        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/noAcc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="কোন অ্যাকাউন্ট নেই?" />
+
+        <TextView
+            android:id="@+id/registerTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  রেজিস্ট্রেশন করুন"
+            android:textStyle="bold"
+            android:textColor="#283593"
+            android:layout_toEndOf="@id/noAcc"
+            android:textAppearance="@style/TextAppearance.Material3.TitleSmall"/>
+    </RelativeLayout>
+
+</LinearLayout>
