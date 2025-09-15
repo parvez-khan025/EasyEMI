@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InstallmentSellFragment"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:src="@drawable/easy_emi"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:layout_marginBottom="@dimen/_16sdp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Installment Sale"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/darkGray"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Customer Search & Selection -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Customer"
+        android:textColor="@color/darkGray"
+        android:layout_marginBottom="6dp"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteCustomer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Type name or phone number"
+        android:inputType="text"
+        android:padding="12dp"
+        android:background="@drawable/rounded_edittext"
+        android:dropDownHeight="200dp"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Installment Plan -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Installment Plan"
+        android:textColor="@color/darkGray"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="6dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerPlan"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_edittext"/>
+
+    <!-- Down Payment -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Down Payment"
+        android:textColor="@color/darkGray"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="6dp"/>
+
+    <EditText
+        android:id="@+id/etDownPayment"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Enter amount"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:background="@drawable/rounded_edittext"/>
+
+    <!-- Confirm Button -->
+    <Button
+        android:id="@+id/btnConfirmInstallment"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Confirm"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/primaryGreen"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:cornerRadius="8dp"/>
+
+</LinearLayout>

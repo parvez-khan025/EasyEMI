@@ -4,11 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".LoginFragment"
+    tools:context=".login.LoginFragment"
     android:orientation="vertical"
     android:gravity="center"
     android:padding="@dimen/_16sdp"
-    android:background="@drawable/gradiant">
+    android:background="@drawable/background">
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animationView"
@@ -26,7 +26,7 @@
         android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
         android:gravity="center"
         android:layout_margin="@dimen/_8sdp"
-        android:textColor="#283593"
+        android:textColor="#0C4561"
         android:fontFamily="@font/acme"
         android:textStyle="bold"/>
 
@@ -75,9 +75,10 @@
         android:text="লগইন"
         android:layout_marginTop="@dimen/_16sdp"
         style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-        android:backgroundTint="#3F51B5"
-        android:textColor="#FFFFFF"
+        android:backgroundTint="@color/primaryGreen"
+        android:textColor="@color/white"
         android:padding="12dp"
+        android:textStyle="bold"
         android:textAppearance="@style/TextAppearance.Material3.TitleMedium"/>
 
     <RelativeLayout
@@ -99,7 +100,7 @@
             android:layout_height="wrap_content"
             android:text="  রেজিস্ট্রেশন করুন"
             android:textStyle="bold"
-            android:textColor="#283593"
+            android:textColor="#0C4561"
             android:layout_toEndOf="@id/noAcc"
             android:textAppearance="@style/TextAppearance.Material3.TitleSmall"/>
     </RelativeLayout>

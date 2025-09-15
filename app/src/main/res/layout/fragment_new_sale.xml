@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewSaleFragment"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/lightGray">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/primaryBlue"
+        android:paddingHorizontal="12dp"
+        android:layout_marginBottom="12dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
+            android:src="@android:drawable/ic_media_previous"
+            android:contentDescription="Back"
+            app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/tvHeaderTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Sale"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"/>
+        </LinearLayout>
+
+        <!-- Search Product -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <EditText
+                android:id="@+id/etSearchProduct"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:hint="Search product"
+                android:padding="12dp"
+                android:background="@drawable/rounded_edittext"
+                android:drawableStart="@android:drawable/ic_menu_search"
+                android:drawablePadding="8dp"/>
+
+            <ImageButton
+                android:id="@+id/btnScanBarcode"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="8dp"
+                android:background="@color/primaryGreen"
+                android:src="@android:drawable/ic_menu_camera"
+                android:contentDescription="Scan Barcode"
+                app:tint="@color/white" />
+        </LinearLayout>
+
+        <!-- Cart Items (RecyclerView) -->
+        <TextView
+            android:id="@+id/tvCartTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cart"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/darkGray"
+            android:layout_marginBottom="6dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCart"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingBottom="8dp"/>
+
+        <!-- Payment Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:background="@color/white"
+            android:elevation="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"
+            android:clipToPadding="false">
+
+            <!-- Total Amount -->
+            <TextView
+                android:id="@+id/tvTotalAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total: ৳ 0"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/darkGray"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Payment Type Selection -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment Type"
+                android:textStyle="bold"
+                android:textColor="@color/darkGray"
+                android:layout_marginBottom="6dp"/>
+
+            <RadioGroup
+                android:id="@+id/rgPaymentType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbInstant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Instant"
+                    android:textColor="@color/primaryBlue"
+                    android:checked="true"
+                    android:layout_marginEnd="20dp"/>
+
+                <RadioButton
+                    android:id="@+id/rbInstallment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Installment"
+                    android:textColor="@color/primaryGreen"/>
+            </RadioGroup>
+
+            <!-- Installment Details (Shown only if Installment selected) -->
+            <LinearLayout
+                android:id="@+id/layoutInstallmentDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/etDownPayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Down Payment"
+                    android:inputType="number"
+                    android:padding="12dp"
+                    android:background="@drawable/rounded_edittext"
+                    android:layout_marginBottom="8dp"/>
+
+                <EditText
+                    android:id="@+id/etInstallmentMonths"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Installment Duration (months)"
+                    android:inputType="number"
+                    android:padding="12dp"
+                    android:background="@drawable/rounded_edittext"/>
+            </LinearLayout>
+
+            <!-- Confirm Button -->
+            <Button
+                android:id="@+id/btnConfirmSale"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Confirm Sale"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/primaryGreen"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp"
+                android:cornerRadius="8dp"/>
+        </LinearLayout>
+
+    </LinearLayout>

@@ -1,68 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
-    android:padding="@dimen/_20sdp"
-    android:background="@drawable/bg_gradient"
-    tools:context=".StartFragment">
+    android:background="@drawable/background"
+    tools:context=".starter.StartFragment">
 
-    <!-- Logo with Card for soft elevation -->
-    <androidx.cardview.widget.CardView
-        android:layout_width="@dimen/_220sdp"
-        android:layout_height="@dimen/_220sdp"
-        android:layout_marginBottom="32dp"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="6dp"
-        android:layout_gravity="center">
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/_16sdp">
         <ImageView
             android:id="@+id/animationView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="@dimen/_220sdp"
+            android:layout_height="@dimen/_220sdp"
             android:padding="24dp"
             android:scaleType="fitCenter"
             android:src="@drawable/easy_emi" />
-    </androidx.cardview.widget.CardView>
 
-    <!-- Login Button -->
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/loginButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:fontFamily="@font/poppins"
-        android:text="লগইন"
-        android:textAllCaps="false"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:backgroundTint="@color/purple_700"
-        android:textColor="@android:color/white"
-        app:cornerRadius="12dp"
-        app:icon="@drawable/ic_login"
-        app:iconTint="@android:color/white"
-        app:iconGravity="textStart"
-        app:iconPadding="12dp" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/poppins"
+            android:text="লগইন"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:cornerRadius="12dp"
+            android:backgroundTint="@color/primaryGreen"/>
 
-    <!-- Register Button -->
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/registerButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins"
-        android:text="রেজিস্ট্রেশন"
-        android:textAllCaps="false"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:textColor="@color/white"
-        app:strokeColor="#9C27B0"
-        app:strokeWidth="2dp"
-        app:cornerRadius="12dp"
-        app:iconTint="#9C27B0"
-        app:iconGravity="textStart"
-        app:iconPadding="12dp" />
-
-</LinearLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/registerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="রেজিস্ট্রেশন"
+            android:textAllCaps="false"
+            android:textColor="@color/primaryBlue"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:cornerRadius="12dp"
+            app:strokeColor="@color/primaryBlue"
+            app:strokeWidth="2dp"
+            android:backgroundTint="@color/white"/>
+    </LinearLayout>
+</FrameLayout>
