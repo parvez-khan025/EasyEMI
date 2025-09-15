@@ -3,38 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".CustomerFragment"
     android:background="@color/lightGray"
     android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".ProductsFragment">
+    android:padding="12dp">
 
-    <!-- Header -->
-    <LinearLayout
-        android:layout_width="match_parent"
+    <!-- Header Title -->
+    <TextView
+        android:id="@+id/tvCustomersTitle"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Customers"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/primaryGreen"
         android:layout_marginBottom="12dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:layout_gravity="center"/>
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Products"
-            android:textColor="@color/darkGray"
-            android:textSize="22sp"
-            android:textStyle="bold" />
-
-        <ImageButton
-            android:id="@+id/btnAddProduct"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:background="@android:color/transparent"
-            android:contentDescription="Add Product"
-            android:src="@android:drawable/ic_input_add" />
-    </LinearLayout>
-
-    <!-- Search Bar -->
+        <!--SearchBox-->
     <SearchView
         android:id="@+id/svSearchProduct"
         android:layout_width="match_parent"
@@ -48,15 +34,14 @@
         android:inputType="text"
         />
 
-    <!-- Product List -->
+    <!-- RecyclerView for customers -->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvProducts"
+        android:id="@+id/rvCustomers"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:clipToPadding="false"
         android:paddingBottom="8dp"
         android:scrollbars="vertical"
-        tools:listitem="@layout/item_product"/>
-
+        tools:listitem="@layout/item_customer"/>
 </LinearLayout>
