@@ -7,107 +7,143 @@
     android:background="@color/lightGray"
     android:layout_gravity="center">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+<!--        <ImageView-->
+<!--            android:layout_width="@dimen/_100sdp"-->
+<!--            android:layout_height="@dimen/_100sdp"-->
+<!--            android:src="@drawable/easy_emi"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginBottom="16dp"/>-->
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add New Product"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/darkGray"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Product Image Upload -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Product Image"
+            android:textColor="@color/darkGray"
+            android:layout_marginBottom="6dp"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
 
             <ImageView
-                android:layout_width="@dimen/_100sdp"
-                android:layout_height="@dimen/_100sdp"
-                android:src="@drawable/easy_emi"
-                android:layout_gravity="center" />
+                android:id="@+id/imgProductPreview"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/ic_product_placeholder"
+                android:contentDescription="Product Image"
+                android:scaleType="centerCrop"
+                android:background="@drawable/rounded_edittext"/>
 
-            <!-- Header -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Add New Product"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:textColor="@color/darkGray"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="20dp"/>
-
-            <!-- Product Name -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Product Name"
-                android:textColor="@color/darkGray"
-                android:layout_marginBottom="6dp"/>
-            <EditText
-                android:id="@+id/etProductName"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:hint="Enter product name"
-                android:inputType="text"
-                android:padding="12dp"
-                android:background="@drawable/rounded_edittext"
-                android:layout_marginBottom="12dp"/>
-
-            <!-- Product Price -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Price"
-                android:textColor="@color/darkGray"
-                android:layout_marginBottom="6dp"/>
-            <EditText
-                android:id="@+id/etProductPrice"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:hint="Enter price"
-                android:inputType="numberDecimal"
-                android:padding="12dp"
-                android:background="@drawable/rounded_edittext"
-                android:layout_marginBottom="12dp"/>
-
-            <!-- Product Stock -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Stock Quantity"
-                android:textColor="@color/darkGray"
-                android:layout_marginBottom="6dp"/>
-            <EditText
-                android:id="@+id/etProductStock"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:hint="Enter stock quantity"
-                android:inputType="number"
-                android:padding="12dp"
-                android:background="@drawable/rounded_edittext"
-                android:layout_marginBottom="12dp"/>
-
-            <!-- Product Description (Optional) -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Description (Optional)"
-                android:textColor="@color/darkGray"
-                android:layout_marginBottom="6dp"/>
-            <EditText
-                android:id="@+id/etProductDescription"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:hint="Enter product description"
-                android:inputType="textMultiLine"
-                android:padding="12dp"
-                android:background="@drawable/rounded_edittext"
-                android:layout_marginBottom="16dp"/>
-
-            <!-- Confirm Button -->
             <Button
-                android:id="@+id/btnAddProduct"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:text="Add Product"
+                android:id="@+id/btnSelectImage"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Select Image"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/primaryGreen"
                 android:textStyle="bold"
-                android:cornerRadius="8dp"/>
+                android:layout_marginStart="12dp"/>
         </LinearLayout>
 
-    </ScrollView>
+        <!-- Product Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Product Name"
+            android:textColor="@color/darkGray"
+            android:layout_marginBottom="6dp"/>
+        <EditText
+            android:id="@+id/etProductName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Enter product name"
+            android:inputType="text"
+            android:padding="12dp"
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Product Price -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price"
+            android:textColor="@color/darkGray"
+            android:layout_marginBottom="6dp"/>
+        <EditText
+            android:id="@+id/etProductPrice"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Enter price"
+            android:inputType="numberDecimal"
+            android:padding="12dp"
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Product Stock -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stock Quantity"
+            android:textColor="@color/darkGray"
+            android:layout_marginBottom="6dp"/>
+        <EditText
+            android:id="@+id/etProductStock"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Enter stock quantity"
+            android:inputType="number"
+            android:padding="12dp"
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Product Description (Optional) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description (Optional)"
+            android:textColor="@color/darkGray"
+            android:layout_marginBottom="6dp"/>
+        <EditText
+            android:id="@+id/etProductDescription"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:hint="Enter product description"
+            android:inputType="textMultiLine"
+            android:padding="12dp"
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Confirm Button -->
+        <Button
+            android:id="@+id/btnAddProduct"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Add Product"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/primaryGreen"
+            android:textStyle="bold"
+            android:cornerRadius="8dp"/>
+    </LinearLayout>
+
+</ScrollView>
