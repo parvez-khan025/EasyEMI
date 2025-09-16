@@ -58,6 +58,18 @@
         <action
             android:id="@+id/action_dashboardFragment_to_customerFragment"
             app:destination="@id/customerFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_installmentDetailsFragment"
+            app:destination="@id/installmentDetailsFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_transactionFragment"
+            app:destination="@id/transactionFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_reportsFragment"
+            app:destination="@id/reportsFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
     </fragment>
     <fragment
         android:id="@+id/newSaleFragment"
@@ -129,4 +141,41 @@
         android:name="com.example.easyemi.CustomerDetailsFragment"
         android:label="fragment_customer_details"
         tools:layout="@layout/fragment_customer_details" />
+    <fragment
+        android:id="@+id/installmentDetailsFragment"
+        android:name="com.example.easyemi.InstallmentDetailsFragment"
+        android:label="fragment_installment_details"
+        tools:layout="@layout/fragment_installment_details" />
+    <fragment
+        android:id="@+id/transactionFragment"
+        android:name="com.example.easyemi.TransactionFragment"
+        android:label="fragment_transaction"
+        tools:layout="@layout/fragment_transaction" />
+    <fragment
+        android:id="@+id/reportsFragment"
+        android:name="com.example.easyemi.ReportsFragment"
+        android:label="fragment_reports"
+        tools:layout="@layout/fragment_reports" />
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.example.easyemi.UserProfileFragment"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_user_profile" >
+        <action
+            android:id="@+id/action_userProfileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_userProfileFragment_to_chanePasswordFragment"
+            app:destination="@id/chanePasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.easyemi.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" />
+    <fragment
+        android:id="@+id/chanePasswordFragment"
+        android:name="com.example.easyemi.ChanePasswordFragment"
+        android:label="fragment_chane_password"
+        tools:layout="@layout/fragment_chane_password" />
 </navigation>

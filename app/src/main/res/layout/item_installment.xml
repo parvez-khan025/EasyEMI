@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:strokeColor="@color/primaryBlue"
+    app:strokeWidth="1dp"
+    android:backgroundTint="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <!-- Customer Name -->
+            <TextView
+                android:id="@+id/tvCustomerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="John Doe"
+                android:textColor="@color/primaryBlue"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Installment Amount -->
+            <TextView
+                android:id="@+id/tvInstallmentAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Amount: $500"
+                android:textColor="@color/darkGray"
+                android:textSize="14sp" />
+
+            <!-- Due Date -->
+            <TextView
+                android:id="@+id/tvDueDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Due: 16 Sep 2025"
+                android:textColor="@color/darkGray"
+                android:textSize="14sp" />
+
+            <!-- Status -->
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Status: Pending"
+                android:textColor="@color/primaryGreen"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>

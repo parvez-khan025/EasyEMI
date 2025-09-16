@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".UserProfileFragment"
+    android:background="@color/lightGray"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Profile Picture -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            app:cardCornerRadius="60dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/white">
+
+            <ImageView
+                android:id="@+id/ivUserProfile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_product_placeholder" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- User Details in Label : Value style -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:paddingHorizontal="12dp">
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name : John Doe"
+                android:textSize="20sp"
+                android:textColor="@color/primaryBlue"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/tvUserPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone : +880123456789"
+                android:textSize="20sp"
+                android:textColor="@color/darkGray"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/tvUserEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email : john.doe@example.com"
+                android:textSize="20sp"
+                android:textColor="@color/darkGray"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/tvUserAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Address : 123, Example Street, City, Country"
+                android:textSize="20sp"
+                android:textColor="@color/darkGray"
+                android:layout_marginTop="8dp" />
+
+        </LinearLayout>
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:weightSum="2"
+            android:paddingHorizontal="12dp">
+
+            <Button
+                android:id="@+id/btnEditProfile"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="Edit Profile"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/primaryBlue"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btnUpdatePassword"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="Update Password"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/primaryGreen"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- Logout Button -->
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Logout"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:backgroundTint="#F44336"
+            android:layout_marginTop="16dp"
+            android:paddingHorizontal="12dp"
+            android:textAppearance="@style/TextAppearance.Material3.TitleLarge"/>
+
+    </LinearLayout>
+</ScrollView>

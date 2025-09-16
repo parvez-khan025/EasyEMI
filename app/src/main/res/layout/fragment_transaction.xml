@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGray"
+    android:orientation="vertical"
+    android:padding="12dp"
+    tools:context=".TransactionFragment">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/tvTransactionHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="Daily Transactions"
+        android:textColor="@color/primaryBlue"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <!-- Date Filter Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etFromDate"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_edittext"
+            android:drawableEnd="@android:drawable/ic_menu_today"
+            android:drawablePadding="8dp"
+            android:focusable="false"
+            android:hint="From Date"
+            android:padding="12dp" />
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="match_parent" />
+
+        <EditText
+            android:id="@+id/etToDate"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_edittext"
+            android:drawableEnd="@android:drawable/ic_menu_today"
+            android:drawablePadding="8dp"
+            android:focusable="false"
+            android:hint="To Date"
+            android:padding="12dp" />
+
+    </LinearLayout>
+
+    <!-- SearchView -->
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/svSearchTransaction"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/rounded_edittext"
+        android:iconifiedByDefault="false"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:queryHint="Search by name, date or method" />
+
+    <!-- RecyclerView for Transactions -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTransactions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="8dp"
+        android:scrollbars="vertical"
+        tools:listitem="@layout/item_transaction"/>
+
+</LinearLayout>
