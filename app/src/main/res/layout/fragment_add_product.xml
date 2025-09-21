@@ -135,8 +135,7 @@
             android:text="Add Product"
             android:textColor="@color/white"
             android:backgroundTint="@color/primaryGreen"
-            android:textStyle="bold"
-            android:cornerRadius="8dp"/>
+            android:textStyle="bold"/>
     </LinearLayout>
 
 </ScrollView>

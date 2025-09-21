@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lightGray"
@@ -15,34 +15,35 @@
 
         <!-- Header -->
         <TextView
+            android:id="@+id/tvReportHeader"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tvReportHeader"
-            android:text="Reports"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:textColor="@color/primaryBlue"
+            android:layout_marginBottom="8dp"
             android:gravity="center"
-            android:padding="12dp" />
+            android:padding="4dp"
+            android:text="খরচ"
+            android:textColor="@color/black"
+            android:background="@color/primaryGreen"
+            android:textSize="32sp"
+            android:textStyle="bold" />
 
         <!-- Date Filter -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="12dp">
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
 
             <EditText
+                android:id="@+id/etReportFromDate"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
-                android:id="@+id/etReportFromDate"
-                android:hint="From Date"
-                android:focusable="false"
                 android:background="@drawable/rounded_edittext"
                 android:drawableEnd="@android:drawable/ic_menu_today"
                 android:drawablePadding="8dp"
+                android:focusable="false"
+                android:hint="From Date"
                 android:padding="12dp" />
 
             <Space
@@ -50,15 +51,15 @@
                 android:layout_height="match_parent" />
 
             <EditText
+                android:id="@+id/etReportToDate"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
-                android:id="@+id/etReportToDate"
-                android:hint="To Date"
-                android:focusable="false"
                 android:background="@drawable/rounded_edittext"
                 android:drawableEnd="@android:drawable/ic_menu_today"
                 android:drawablePadding="8dp"
+                android:focusable="false"
+                android:hint="To Date"
                 android:padding="12dp" />
         </LinearLayout>
 
@@ -66,94 +67,87 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
             android:orientation="horizontal"
-            android:weightSum="2"
-            android:layout_marginBottom="12dp">
+            android:weightSum="2">
 
-            <!-- Total Sales Card -->
+            <!-- Total Sales -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="0dp"
                 android:layout_height="120dp"
-                android:layout_weight="1"
                 android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="12dp"
-                app:cardElevation="4dp"
-                app:cardBackgroundColor="@color/white">
+                app:cardElevation="4dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Total Sales"
-                        android:textSize="14sp"
                         android:textColor="@color/darkGray"
-                        android:gravity="center" />
+                        android:textSize="14sp" />
 
                     <TextView
+                        android:id="@+id/tvTotalSales"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/tvTotalSales"
                         android:text="৳ 50,000"
-                        android:textSize="18sp"
                         android:textColor="@color/primaryGreen"
-                        android:textStyle="bold"
-                        android:gravity="center" />
-
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Due Installments Card -->
+            <!-- Total Expenses -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="0dp"
                 android:layout_height="120dp"
-                android:layout_weight="1"
                 android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="12dp"
-                app:cardElevation="4dp"
-                app:cardBackgroundColor="@color/white">
+                app:cardElevation="4dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Due Installments"
-                        android:textSize="14sp"
+                        android:text="Total Expenses"
                         android:textColor="@color/darkGray"
-                        android:gravity="center" />
+                        android:textSize="14sp" />
 
                     <TextView
+                        android:id="@+id/tvTotalExpenses"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/tvDueInstallments"
-                        android:text="12"
-                        android:textSize="18sp"
+                        android:text="৳ 20,000"
                         android:textColor="@color/primaryBlue"
-                        android:textStyle="bold"
-                        android:gravity="center" />
-
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
 
         <!-- RecyclerView for Detailed Report -->
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvReportDetails"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/rvReportDetails"
             android:clipToPadding="false"
             android:paddingBottom="8dp"
             android:scrollbars="vertical"
-            tools:listitem="@layout/item_report"/>
-
+            tools:listitem="@layout/item_expenses" />
     </LinearLayout>
 </ScrollView>

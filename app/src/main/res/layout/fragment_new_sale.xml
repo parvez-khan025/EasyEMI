@@ -182,8 +182,7 @@
                 android:textColor="@color/white"
                 android:backgroundTint="@color/primaryGreen"
                 android:textStyle="bold"
-                android:layout_marginTop="12dp"
-                android:cornerRadius="8dp"/>
+                android:layout_marginTop="12dp"/>
         </LinearLayout>
 
     </LinearLayout>

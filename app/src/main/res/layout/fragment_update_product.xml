@@ -137,7 +137,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:backgroundTint="@color/primaryGreen"
-                android:cornerRadius="8dp"
                 android:text="Update"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
