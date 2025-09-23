@@ -1,4 +1,4 @@
-package com.example.easyemi.register
+package com.example.easyemi.views.register
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,6 +9,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.easyemi.R
 import com.example.easyemi.databinding.FragmentRegisterBinding
 import com.example.easyemi.databinding.FragmentStartBinding
+import com.example.easyemi.isEmpty
 
 class registerFragment : Fragment() {
     private lateinit var binding: FragmentRegisterBinding
@@ -26,7 +27,17 @@ class registerFragment : Fragment() {
             loginTV.setOnClickListener {
                 findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
             }
-        }
+            registerBtn.setOnClickListener {
+                etName.isEmpty()
+                etEmail.isEmpty()
+                etNum.isEmpty()
+                etPass.isEmpty()
+                etAddress.isEmpty()
 
+                if(!etName.isEmpty() && !etEmail.isEmpty() && !etNum.isEmpty() && !etPass.isEmpty() && !etAddress.isEmpty()){
+                    findNavController().navigate(R.id.action_registerFragment_to_dashboardFragment)
+                }
+            }
+        }
     }
 }

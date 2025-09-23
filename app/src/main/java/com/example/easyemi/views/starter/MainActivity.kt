@@ -1,4 +1,4 @@
-package com.example.easyemi.starter
+package com.example.easyemi.views.starter
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

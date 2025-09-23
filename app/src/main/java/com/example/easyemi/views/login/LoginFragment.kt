@@ -1,4 +1,4 @@
-package com.example.easyemi.login
+package com.example.easyemi.views.login
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.easyemi.R
 import com.example.easyemi.databinding.FragmentLoginBinding
+import com.example.easyemi.isEmpty
 
 class LoginFragment : Fragment() {
 
@@ -29,7 +30,12 @@ class LoginFragment : Fragment() {
                 findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
             }
             loginBtn.setOnClickListener{
+                etEmail.isEmpty()
+                etPass.isEmpty()
+
+                if(!etEmail.isEmpty() && !etPass.isEmpty()){
                 findNavController().navigate(R.id.action_loginFragment_to_dashboardFragment)
+                }
             }
             }
         }

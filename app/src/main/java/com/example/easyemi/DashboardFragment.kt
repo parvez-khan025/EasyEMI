@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.easyemi.databinding.FragmentDashboardBinding
-
 class DashboardFragment : Fragment() {
     private lateinit var binding: FragmentDashboardBinding
 
@@ -22,16 +21,31 @@ class DashboardFragment : Fragment() {
 
     private fun setListener() {
         with(binding){
-            icNewSale.setOnClickListener {
+
+            cardNewSale.setOnClickListener {
                 findNavController().navigate(R.id.action_dashboardFragment_to_newSaleFragment)
             }
-            icProducts.setOnClickListener {
+            cardProducts.setOnClickListener {
                 findNavController().navigate(R.id.action_dashboardFragment_to_productsFragment)
             }
-            icCustomers.setOnClickListener {
-                findNavController().navigate(R.id.action_dashboardFragment_to_customerFragment)
+            cardCustomers.setOnClickListener {
+                findNavController().navigate(R.id.action_customerFragment_to_customerDetailsFragment)
             }
-
+            cardInstallments.setOnClickListener {
+                findNavController().navigate(R.id.action_dashboardFragment_to_installmentDetailsFragment)
+            }
+            cardTransactions.setOnClickListener {
+                findNavController().navigate(R.id.action_dashboardFragment_to_transactionFragment)
+            }
+            cardExpenses.setOnClickListener {
+                findNavController().navigate(R.id.action_dashboardFragment_to_expensesFragment)
+            }
+            cardVendors.setOnClickListener {
+                findNavController().navigate(R.id.action_dashboardFragment_to_vendorsFragment)
+            }
+            cardInventory.setOnClickListener {
+                findNavController().navigate(R.id.action_dashboardFragment_to_inventoryFragment)
+            }
+            }
         }
     }
-}
