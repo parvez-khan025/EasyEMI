@@ -29,8 +29,8 @@
             android:id="@+id/action_registerFragment_to_dashboardFragment"
             app:destination="@id/dashboardFragment" />
         <action
-            android:id="@+id/action_registerFragment_to_otpFragment"
-            app:destination="@id/otpFragment" />
+            android:id="@+id/action_registerFragment_to_emailverificationFragment"
+            app:destination="@id/emailverificationFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -46,6 +46,9 @@
         <action
             android:id="@+id/action_loginFragment_to_dashboardFragment"
             app:destination="@id/dashboardFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_otpFragment"
+            app:destination="@id/otpFragment" />
     </fragment>
     <fragment
         android:id="@+id/dashboardFragment"
@@ -205,5 +208,14 @@
         <action
             android:id="@+id/action_otpFragment_to_dashboardFragment"
             app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/emailverificationFragment"
+        android:name="com.example.easyemi.EmailverificationFragment"
+        android:label="fragment_emailverification"
+        tools:layout="@layout/fragment_emailverification" >
+        <action
+            android:id="@+id/action_emailverificationFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
 </navigation>
