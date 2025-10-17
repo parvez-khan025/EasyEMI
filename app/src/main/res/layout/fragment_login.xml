@@ -34,7 +34,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="মোবাইল"
+        android:hint="ই-মেইল"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_marginTop="@dimen/_8sdp"
         android:layout_marginHorizontal="@dimen/_8sdp"
@@ -103,6 +103,13 @@
             android:textColor="#0C4561"
             android:layout_toEndOf="@id/noAcc"
             android:textAppearance="@style/TextAppearance.Material3.TitleSmall"/>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
     </RelativeLayout>
 
 </LinearLayout>

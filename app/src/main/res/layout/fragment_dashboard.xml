@@ -11,44 +11,22 @@
 
     <!-- Header -->
     <LinearLayout
-        android:id="@+id/headerLayout"
         android:layout_width="match_parent"
-        android:layout_height="72dp"
-        android:layout_marginBottom="12dp"
-        android:background="@color/primaryBlue"
-        android:clipToPadding="false"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:padding="12dp">
-
-        <ImageView
-            android:id="@+id/imgLogo"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:contentDescription="Logo"
-            android:src="@mipmap/ic_launcher_round" />
+        android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/tvHeaderTitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
             android:layout_weight="1"
-            android:text="EasyEMI"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <ImageButton
-            android:id="@+id/btnProfile"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:background="@android:color/transparent"
-            android:contentDescription="Profile"
-            android:src="@android:drawable/ic_menu_myplaces"
-            card_view:tint="@color/white" />
+            android:text="Dashboard"
+            android:gravity="center"
+            android:textColor="@color/darkGray"
+            android:textSize="24sp"
+            android:textStyle="italic" />
     </LinearLayout>
-
     <!-- Quick Stats Row -->
     <LinearLayout
         android:id="@+id/statsRow"

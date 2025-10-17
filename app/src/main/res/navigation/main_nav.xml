@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.example.easyemi.views.register.registerFragment"
+        android:name="com.example.easyemi.views.register.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" >
         <action
@@ -46,9 +46,6 @@
         <action
             android:id="@+id/action_loginFragment_to_dashboardFragment"
             app:destination="@id/dashboardFragment" />
-        <action
-            android:id="@+id/action_loginFragment_to_otpFragment"
-            app:destination="@id/otpFragment" />
     </fragment>
     <fragment
         android:id="@+id/dashboardFragment"
@@ -201,15 +198,6 @@
         android:label="fragment_inventory"
         tools:layout="@layout/fragment_inventory" />
     <fragment
-        android:id="@+id/otpFragment"
-        android:name="com.example.easyemi.OtpFragment"
-        android:label="fragment_otp"
-        tools:layout="@layout/fragment_otp" >
-        <action
-            android:id="@+id/action_otpFragment_to_dashboardFragment"
-            app:destination="@id/dashboardFragment" />
-    </fragment>
-    <fragment
         android:id="@+id/emailverificationFragment"
         android:name="com.example.easyemi.EmailverificationFragment"
         android:label="fragment_emailverification"
@@ -217,5 +205,14 @@
         <action
             android:id="@+id/action_emailverificationFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nointernetFragment"
+        android:name="com.example.easyemi.NointernetFragment"
+        android:label="fragment_nointernet"
+        tools:layout="@layout/fragment_nointernet" >
+        <action
+            android:id="@+id/action_nointernetFragment_to_startFragment"
+            app:destination="@id/startFragment" />
     </fragment>
 </navigation>
