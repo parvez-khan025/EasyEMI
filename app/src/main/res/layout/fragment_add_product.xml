@@ -121,7 +121,7 @@
             android:textColor="@color/darkGray"
             android:layout_marginBottom="6dp"/>
         <EditText
-            android:id="@+id/etProductStock"
+            android:id="@+id/etProductQuantity"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="Enter stock quantity"
