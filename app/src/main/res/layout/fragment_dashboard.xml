@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lightGray"
+    android:background="@drawable/background"
     android:orientation="vertical"
     android:padding="16dp"
     tools:context=".DashboardFragment">
@@ -100,7 +100,7 @@
                     android:id="@+id/tvInstallmentsDueLabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Due Installments"
+                    android:text="Last Sale"
                     android:textColor="@color/white"
                     android:textSize="12sp" />
             </LinearLayout>
@@ -333,7 +333,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="Transactions"
-                    android:textColor="@color/darkGray"
+                    android:textColor="@color/white"
                     android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -427,7 +427,7 @@
                     android:layout_width="44dp"
                     android:layout_height="44dp"
                     android:src="@android:drawable/ic_menu_sort_alphabetically"
-                    card_view:tint="@color/primaryBlue" />
+                    card_view:tint="@color/white" />
 
                 <TextView
                     android:id="@+id/tvInventory"
@@ -435,7 +435,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="Inventory"
-                    android:textColor="@color/darkGray"
+                    android:textColor="@color/white"
                     android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>

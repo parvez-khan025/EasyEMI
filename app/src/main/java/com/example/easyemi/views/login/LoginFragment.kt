@@ -1,19 +1,17 @@
 package com.example.easyemi.views.login
 
 import android.util.Log
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.easyemi.R
 import com.example.easyemi.base.BaseFragment
-import com.example.easyemi.data.models.UserLogin
 import com.example.easyemi.databinding.FragmentLoginBinding
 import com.example.easyemi.isEmpty
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class LoginFragment : BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::inflate) {
 
     private lateinit var auth: FirebaseAuth

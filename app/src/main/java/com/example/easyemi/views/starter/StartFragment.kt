@@ -1,29 +1,31 @@
 package com.example.easyemi.views.starter
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.easyemi.R
+import com.example.easyemi.base.BaseFragment
 import com.example.easyemi.databinding.FragmentStartBinding
+import com.google.firebase.auth.FirebaseAuth
 
-class StartFragment : Fragment() {
-    private lateinit var binding: FragmentStartBinding
+class StartFragment : BaseFragment<FragmentStartBinding>(FragmentStartBinding::inflate) {
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        binding = FragmentStartBinding.inflate(inflater, container, false)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        setListener()
-        return binding.root
+        // 🔹 Check for auto login when app starts
+        setAutoLogin()
     }
 
-    private fun setListener() {
+    private fun setAutoLogin() {
+        val user = FirebaseAuth.getInstance().currentUser
+        if (user != null && user.isEmailVerified) {
+            // ✅ Already logged in → Go to Dashboard
+            findNavController().navigate(R.id.action_startFragment_to_dashboardFragment)
+        }
+    }
+
+    override fun setListener() {
         with(binding) {
             loginButton.setOnClickListener {
                 findNavController().navigate(R.id.action_startFragment_to_loginFragment)
@@ -32,5 +34,9 @@ class StartFragment : Fragment() {
                 findNavController().navigate(R.id.action_startFragment_to_registerFragment)
             }
         }
+    }
+
+    override fun allObserver() {
+        // Not needed for now
     }
 }

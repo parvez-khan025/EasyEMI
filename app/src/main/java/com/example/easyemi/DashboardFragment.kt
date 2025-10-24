@@ -7,6 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.easyemi.databinding.FragmentDashboardBinding
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
 class DashboardFragment : Fragment() {
     private lateinit var binding: FragmentDashboardBinding
 
@@ -29,7 +32,7 @@ class DashboardFragment : Fragment() {
                 findNavController().navigate(R.id.action_dashboardFragment_to_productsFragment)
             }
             cardCustomers.setOnClickListener {
-                findNavController().navigate(R.id.action_customerFragment_to_customerDetailsFragment)
+                findNavController().navigate(R.id.action_dashboardFragment_to_customerFragment)
             }
             cardInstallments.setOnClickListener {
                 findNavController().navigate(R.id.action_dashboardFragment_to_installmentDetailsFragment)

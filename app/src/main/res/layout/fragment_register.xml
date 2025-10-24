@@ -33,7 +33,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="রেজিস্ট্রেশন করুন"
+                android:text="Registration"
                 android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
                 android:gravity="center"
                 android:layout_margin="@dimen/_8sdp"
@@ -44,7 +44,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="দোকানের নাম"
+                android:hint="Shop's Name"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:layout_marginHorizontal="@dimen/_8sdp"
@@ -61,7 +61,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="দোকানের ঠিকানা"
+                android:hint="Shop's Address"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:layout_marginHorizontal="@dimen/_8sdp"
@@ -79,7 +79,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="মোবাইল"
+                android:hint="Contact Number"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:layout_marginHorizontal="@dimen/_8sdp"
@@ -89,14 +89,16 @@
                     android:id="@+id/et_num"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:digits="0123456789"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="ই-মেইল"
+                android:hint="Email"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:layout_marginHorizontal="@dimen/_8sdp"
@@ -113,7 +115,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="পাসওয়ার্ড"
+                android:hint="Password"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:layout_marginHorizontal="@dimen/_8sdp"
@@ -123,7 +125,8 @@
                     android:id="@+id/et_pass"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textWebPassword" />
+                    android:inputType="textWebPassword"
+                    android:maxLength="30"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -131,7 +134,7 @@
                 android:id="@+id/registerBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="রেজিস্টার"
+                android:text="Register"
                 android:layout_marginTop="@dimen/_16sdp"
                 style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
                 android:backgroundTint="@color/primaryGreen"
@@ -151,13 +154,13 @@
                     android:id="@+id/haveAcc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="ইতিমধ্যেই অ্যাকাউন্ট আছে?" />
+                    android:text="Already have an account?" />
 
                 <TextView
                     android:id="@+id/loginTV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="  লগইন করুন"
+                    android:text="  Login"
                     android:textStyle="bold"
                     android:textColor="@color/primaryBlue"
                     android:layout_toEndOf="@id/haveAcc"

@@ -22,7 +22,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="লগইন করুন"
+        android:text="Login"
         android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
         android:gravity="center"
         android:layout_margin="@dimen/_8sdp"
@@ -34,7 +34,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="ই-মেইল"
+        android:hint="Email"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_marginTop="@dimen/_8sdp"
         android:layout_marginHorizontal="@dimen/_8sdp"
@@ -52,7 +52,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="পাসওয়ার্ড"
+        android:hint="Password"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_marginTop="@dimen/_8sdp"
         android:layout_marginHorizontal="@dimen/_8sdp"
@@ -72,7 +72,7 @@
         android:id="@+id/loginBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="লগইন"
+        android:text="Login"
         android:layout_marginTop="@dimen/_16sdp"
         style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
         android:backgroundTint="@color/primaryGreen"
@@ -92,13 +92,13 @@
             android:id="@+id/noAcc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="কোন অ্যাকাউন্ট নেই?" />
+            android:text="Don't have an account?" />
 
         <TextView
             android:id="@+id/registerTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="  রেজিস্ট্রেশন করুন"
+            android:text="  Register"
             android:textStyle="bold"
             android:textColor="#0C4561"
             android:layout_toEndOf="@id/noAcc"
