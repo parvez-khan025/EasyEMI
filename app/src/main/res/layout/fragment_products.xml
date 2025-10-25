@@ -35,20 +35,36 @@
             android:src="@android:drawable/ic_input_add" />
     </LinearLayout>
 
-    <!-- Search Bar -->
-    <SearchView
-        android:id="@+id/svSearchProduct"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginBottom="12dp"
-        android:background="@drawable/rounded_edittext"
-        android:iconifiedByDefault="false"
-        android:queryHint="Search products by name"
-        android:padding="12dp"
-        android:imeOptions="actionSearch"
-        android:inputType="text" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="12dp">
 
-    <!-- Product List -->
+    <!-- Search Bar -->
+        <SearchView
+            android:id="@+id/svSearchProduct"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:hint="Search product"
+            android:padding="12dp"
+            android:background="@drawable/rounded_edittext"
+            android:drawableStart="@android:drawable/ic_menu_search"
+            android:drawablePadding="8dp"/>
+
+            <ImageButton
+                android:id="@+id/btnScanBarcode"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/ic_photo_camera_black_48dp"
+                android:contentDescription="Scan Barcode"
+                app:tint="@color/black" />
+        </LinearLayout>
+
+        <!-- Product List -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvProducts"
         android:layout_width="match_parent"
@@ -57,7 +73,6 @@
         android:clipToPadding="false"
         android:paddingBottom="8dp"
         android:scrollbars="vertical"
-        app:spanCount="2"
         tools:listitem="@layout/item_product"/>
 
 </LinearLayout>

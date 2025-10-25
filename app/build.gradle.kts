@@ -67,6 +67,8 @@ dependencies {
     implementation("com.intuit.ssp:ssp-android:1.1.1")
     implementation("com.intuit.sdp:sdp-android:1.1.1")
     implementation("androidx.multidex:multidex:2.0.1")
+    implementation("com.google.zxing:core:3.5.2")
+    implementation("com.journeyapps:zxing-android-embedded:4.3.0")
     implementation(libs.lottie)
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)

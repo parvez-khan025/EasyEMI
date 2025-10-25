@@ -14,8 +14,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/bottomNav"
-        android:padding="16dp"
-        android:fillViewport="true">
+        android:fillViewport="true"
+        android:padding="16dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -76,11 +76,11 @@
                             android:textStyle="bold" />
 
                         <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:text="Today's Sales"
                             android:textColor="@color/white"
-                            android:textSize="12sp"
-                            android:layout_height="wrap_content"
-                            android:layout_width="wrap_content"/>
+                            android:textSize="12sp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -110,11 +110,11 @@
                             android:textStyle="bold" />
 
                         <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:text="Last Sale"
                             android:textColor="@color/white"
-                            android:textSize="12sp"
-                            android:layout_height="wrap_content"
-                            android:layout_width="wrap_content"/>
+                            android:textSize="12sp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
@@ -152,11 +152,11 @@
                             android:textStyle="bold" />
 
                         <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:text="Revenue This Month"
                             android:textColor="@color/darkGray"
-                            android:textSize="12sp"
-                            android:layout_height="wrap_content"
-                            android:layout_width="wrap_content"/>
+                            android:textSize="12sp" />
                     </LinearLayout>
 
                     <ImageView
@@ -449,6 +449,40 @@
                             android:textStyle="bold" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardBarcode"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_columnWeight="1"
+                    card_view:cardBackgroundColor="@color/primaryGreen"
+                    card_view:cardCornerRadius="14dp"
+                    card_view:cardElevation="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/icBarcode"
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:src="@drawable/ic_barcode"
+                            card_view:tint="@color/white" />
+
+                        <TextView
+                            android:id="@+id/tvBarcode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Barcode"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
 
             </GridLayout>
         </LinearLayout>

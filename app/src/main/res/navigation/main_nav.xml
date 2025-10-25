@@ -82,6 +82,9 @@
         <action
             android:id="@+id/action_dashboardFragment_to_inventoryFragment"
             app:destination="@id/inventoryFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_barcodeFragment"
+            app:destination="@id/barcodeFragment" />
     </fragment>
     <fragment
         android:id="@+id/newSaleFragment"
@@ -221,5 +224,14 @@
         <action
             android:id="@+id/action_nointernetFragment_to_startFragment"
             app:destination="@id/startFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/barcodeFragment"
+        android:name="com.example.easyemi.BarcodeFragment"
+        android:label="fragment_barcode"
+        tools:layout="@layout/fragment_barcode" >
+        <action
+            android:id="@+id/action_barcodeFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
     </fragment>
 </navigation>

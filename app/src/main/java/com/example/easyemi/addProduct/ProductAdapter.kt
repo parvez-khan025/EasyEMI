@@ -1,7 +1,9 @@
 package com.example.easyemi.addProduct
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -11,11 +13,14 @@ import com.example.easyemi.data.models.Product
 import com.example.easyemi.databinding.ItemProductBinding
 
 class ProductAdapter(
-    private val onItemClick: (Product) -> Unit
+    private val onItemClick: (Product) -> Unit,
+    private val onBarcodeClick: ((Product) -> Unit)? = null, // optional
+    private val showBarcodeIcon: Boolean = false // NEW flag
 ) : ListAdapter<Product, ProductAdapter.ProductViewHolder>(DiffCallback()) {
 
     inner class ProductViewHolder(private val binding: ItemProductBinding) :
         RecyclerView.ViewHolder(binding.root) {
+
         fun bind(product: Product) {
             binding.tvProductName.text = product.name
             binding.tvProductPrice.text = "Price: ৳${product.price}"
@@ -26,8 +31,16 @@ class ProductAdapter(
                 .placeholder(R.drawable.ic_product_placeholder)
                 .into(binding.imgProduct)
 
-            binding.root.setOnClickListener {
-                onItemClick(product)
+            // Regular item click
+            binding.root.setOnClickListener { onItemClick(product) }
+
+            // Barcode icon click using findViewById
+            val barcodeIcon = binding.root.findViewById<ImageView>(R.id.imgBarcode)
+            barcodeIcon?.apply {
+                visibility = if (showBarcodeIcon) View.VISIBLE else View.GONE
+                setOnClickListener {
+                    onBarcodeClick?.invoke(product)
+                }
             }
         }
     }

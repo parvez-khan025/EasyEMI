@@ -57,6 +57,9 @@ class DashboardFragment : Fragment() {
         cardInventory.setOnClickListener {
             navController.navigate(R.id.action_dashboardFragment_to_inventoryFragment)
         }
+        cardBarcode.setOnClickListener {
+            navController.navigate(R.id.action_dashboardFragment_to_barcodeFragment)
+        }
     }
 
     private fun setupBottomNav() {

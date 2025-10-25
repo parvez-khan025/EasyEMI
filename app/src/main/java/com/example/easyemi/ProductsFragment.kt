@@ -34,19 +34,23 @@ class ProductsFragment : Fragment() {
     }
 
     private fun setupRecyclerView() {
-        adapter = ProductAdapter { product ->
-            val bundle = Bundle().apply {
-                putString("productID", product.ProductID)
-            }
-            findNavController().navigate(
-                R.id.action_productsFragment_to_productDetailsFragment,
-                bundle
-            )
-        }
+        adapter = ProductAdapter(
+            onItemClick = { product ->
+                val bundle = Bundle().apply {
+                    putString("productID", product.ProductID)
+                }
+                findNavController().navigate(
+                    R.id.action_productsFragment_to_productDetailsFragment,
+                    bundle
+                )
+            },
+            showBarcodeIcon = false // Hides the barcode icon in this fragment
+        )
 
         binding.rvProducts.layoutManager = LinearLayoutManager(requireContext())
         binding.rvProducts.adapter = adapter
     }
+
 
     private fun loadProducts() {
         db.collection("products")
