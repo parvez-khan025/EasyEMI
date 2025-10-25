@@ -30,11 +30,11 @@
         <!-- Product Image -->
         <ImageView
             android:id="@+id/imgProductDetail"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_300sdp"
             android:layout_marginBottom="16dp"
             android:contentDescription="Product Image"
-            android:scaleType="centerCrop"
+            android:scaleType="fitCenter"
             android:src="@drawable/ic_product_placeholder" />
 
         <!-- Product Name -->
@@ -45,7 +45,7 @@
             android:layout_marginBottom="8dp"
             android:text="Product Name"
             android:textColor="@color/darkGray"
-            android:textSize="22sp"
+            android:textSize="24sp"
             android:textStyle="bold" />
 
         <!-- Product Price -->
@@ -56,7 +56,7 @@
             android:layout_marginBottom="8dp"
             android:text="Price: ৳0"
             android:textColor="@color/primaryGreen"
-            android:textSize="18sp" />
+            android:textSize="24sp" />
 
         <!-- Stock -->
         <TextView
@@ -66,7 +66,7 @@
             android:layout_marginBottom="8dp"
             android:text="Stock: 0"
             android:textColor="@color/darkGray"
-            android:textSize="16sp" />
+            android:textSize="20sp" />
 
         <!-- Description -->
         <TextView
@@ -76,7 +76,7 @@
             android:layout_marginBottom="16dp"
             android:text="Product description goes here."
             android:textColor="@color/darkGray"
-            android:textSize="14sp" />
+            android:textSize="18sp" />
 
         <!-- Buttons for edit or buy -->
         <Button

@@ -71,6 +71,8 @@ dependencies {
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
     implementation(libs.imagePicker)
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    kapt("com.github.bumptech.glide:compiler:4.16.0")
 
     // Play Services Auth (for phone number verification)
     implementation("com.google.android.gms:play-services-auth:21.4.0")
